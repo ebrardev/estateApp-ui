@@ -9,6 +9,7 @@ import {
   RouterProvider,
   
 } from "react-router-dom"
+import SinglePage from "./routes/singlePage/SinglePage"
 
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
           {
             path:"/list",
             element:<ListPage/>
+          },
+          {
+            path:"/:id",
+            element: <SinglePage/>
           }
         ]
       
