@@ -1,19 +1,33 @@
-import Navbar from "./components/Navbar/Navbar"
+
 import "./layout.scss"
 import PageHome from "./routes/PageHome/pageHome"
+import ListPage from "./routes/listPage/listPage"
+import {
+  createBrowserRouter,
+  RouterProvider,
+  
+} from "react-router-dom"
 
 
 function App() {
-  return (
-    <div className="layout"> 
-    <div className="navbar">
-    <Navbar />
-    </div>
-   <div className="content">
-    <PageHome />
-   </div>
 
-    </div>
+  const router  = createBrowserRouter([
+    {
+      path:"/",
+      element:
+        <PageHome/>
+      
+    },
+    {
+      path:"/list",
+      element:
+        <ListPage/>
+      
+    }
+  ])
+  return (
+
+    <RouterProvider router={router}/>
   )
 }
 
