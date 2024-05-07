@@ -1,6 +1,8 @@
 
-import "./layout.scss"
+
 import PageHome from "./routes/PageHome/pageHome"
+
+import Layout from "./routes/layout/layout"
 import ListPage from "./routes/listPage/listPage"
 import {
   createBrowserRouter,
@@ -15,15 +17,20 @@ function App() {
     {
       path:"/",
       element:
-        <PageHome/>
+        <Layout/>,
+        children:[
+          {
+            path:"/",
+            element:<PageHome/>
+          },
+          {
+            path:"/list",
+            element:<ListPage/>
+          }
+        ]
       
     },
-    {
-      path:"/list",
-      element:
-        <ListPage/>
-      
-    }
+  
   ])
   return (
 
