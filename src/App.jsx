@@ -11,6 +11,8 @@ import {
 } from "react-router-dom"
 import SinglePage from "./routes/singlePage/SinglePage"
 import ProfilePage from "./routes/profilePage/profilePage"
+import Login from "./routes/login/Login"
+import Register from "./routes/register/Register"
 
 
 function App() {
@@ -36,7 +38,16 @@ function App() {
           {
             path:"/profile",
             element: <ProfilePage/>
-          }
+          },
+          {
+            path:"/login",
+            element: <Login/>
+          },
+          {
+            path:"/register",
+            element: <Register/>
+          },
+         
         ]
       
     },
