@@ -10,6 +10,7 @@ import {
   
 } from "react-router-dom"
 import SinglePage from "./routes/singlePage/SinglePage"
+import ProfilePage from "./routes/profilePage/profilePage"
 
 
 function App() {
@@ -31,6 +32,10 @@ function App() {
           {
             path:"/:id",
             element: <SinglePage/>
+          },
+          {
+            path:"/profile",
+            element: <ProfilePage/>
           }
         ]
       
